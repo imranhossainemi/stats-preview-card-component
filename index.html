@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -10,22 +10,37 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    body{
+      min-width: 1440px;
+      min-height: 720px;
+      background: hsl(233,47%,7%);
+      align-items: center;
+    }
+
+    @media screen and(max-width="600px") {
+      body{
+        min-width: 375px;
+      }
+    }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
+<section role="main_content">
+  <div class="content">
+    <h1>Get insights that help your business grow.<span></span></h1>
+    <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+  experience, and overall efficiency.</p>
+    <div class="stats">
+      <p>10k+ companies<span></span></p>
+      <p>314 templates<span></span></p>
+      <p>12m+ queries<span></span></p>
+    </div>
+  </div>
+  <div class="mainImg"></div>
+</section>
+  <div class="attribution" role="CreativeLinks">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
