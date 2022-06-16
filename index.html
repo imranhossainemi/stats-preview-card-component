@@ -10,13 +10,67 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
     body{
       min-width: 1440px;
-      min-height: 720px;
+      min-height: 1080px;
       background: hsl(233,47%,7%);
+      font-size: 15px;
+      
+    }
+    .main_content{
+      width: 1080px;
+      height: 450px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      border-radius: 10px ;
+      background-color: hsl(244,38%,16%);
+    }
+    .content,.mainImg{
+      width: 540px;
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
       align-items: center;
     }
-
+    .content>h1,.content>p, .content>.stats{
+      width: 300px;
+    }
+    .content>p,.content>.stats>p{
+      font-weight: 400;
+      color: hsl(0,0%,100%,0.75);
+      font-family: 'Lexend Deca', sans-serif;
+    }
+    .content>.stats>p{
+      color: hsl(0,0%,100%,0.6);
+      text-transform: uppercase;
+    }
+    .content>h1,.content>.stats>p>span{
+      font-family: 'Inter', sans-serif;
+      color: hsl(0,0%,100%);
+      font-weight: 700;
+    }
+    .content>h1>span{
+      color: hsl(277,64%,61%);
+    }
+    .content>.stats{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-top: 50px;
+    }
+    .content>.stats>p>span{
+      position: absolute;
+      top: -20%;
+    }
     @media screen and(max-width="600px") {
       body{
         min-width: 375px;
@@ -27,18 +81,20 @@
   </style>
 </head>
 <body>
-<section role="main_content">
+<section role="main_content" class="main_content">
   <div class="content">
-    <h1>Get insights that help your business grow.<span></span></h1>
+    <h1>Get <span>insights</span> that help your business grow.</h1>
     <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
   experience, and overall efficiency.</p>
     <div class="stats">
-      <p>10k+ companies<span></span></p>
-      <p>314 templates<span></span></p>
-      <p>12m+ queries<span></span></p>
+      <p><span>10k+</span> companies</p>
+      <p><span>314</span> templates</p>
+      <p> <span>12m+</span> queries</p>
     </div>
   </div>
-  <div class="mainImg"></div>
+  <div class="mainImg">
+    <img src="/images/image-header-desktop.jpg" width="100%" alt="header image">
+  </div>
 </section>
   <div class="attribution" role="CreativeLinks">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
