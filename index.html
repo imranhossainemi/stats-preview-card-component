@@ -24,39 +24,47 @@
       height: 450px;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: left;
       align-items: center;
       margin: 0 auto;
-      border-radius: 10px ;
-      background-color: hsl(244,38%,16%);
-    }
-    .content,.mainImg{
-      width: 540px;
+      border-radius: 10px;
+      background-image: url(/images/image-header-desktop.jpg);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
     }
     .content{
+      width: 540px;
+      height: 450px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+      background-color: hsl(244,38%,16%);
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
     }
-    .content>h1,.content>p, .content>.stats{
-      width: 300px;
+    .content>.article>h1,.content>.article>p, .content>.stats{
+      width: 400px;
     }
-    .content>p,.content>.stats>p{
+    .content>.article>p,.content>.stats>p{
       font-weight: 400;
       color: hsl(0,0%,100%,0.75);
       font-family: 'Lexend Deca', sans-serif;
     }
-    .content>.stats>p{
+    .content>.stats p{
       color: hsl(0,0%,100%,0.6);
       text-transform: uppercase;
     }
-    .content>h1,.content>.stats>p>span{
+    .content>.article>h1,.content>.stats h1{
       font-family: 'Inter', sans-serif;
       color: hsl(0,0%,100%);
       font-weight: 700;
     }
-    .content>h1>span{
+    .content>.article>h1{
+      font-size: 32px;
+    }
+    .content>.article>h1>span{
       color: hsl(277,64%,61%);
     }
     .content>.stats{
@@ -67,13 +75,51 @@
       position: relative;
       margin-top: 50px;
     }
-    .content>.stats>p>span{
-      position: absolute;
-      top: -20%;
+    .content>.stats h1,.content>.stats p{
+      margin: 0px;
+      padding: 0px;
     }
-    @media screen and(max-width="600px") {
+    .layerSec{
+      width: 540px;
+      height: 450px;
+      background-color: hsl(277,64%,61%,0.5);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    @media screen and (max-width:600px) {
       body{
         min-width: 375px;
+      }
+      .main_content{
+        width: 350px;
+        height: 850px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-end;
+        background-position: top;
+      }
+      .content{
+        width: 350px;
+        height: auto;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 10px;
+      }
+      .layerSec{
+        width: 350px;
+        height: 288px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 0px;
+      }
+      .content>.article>h1,.content>.article>p, .content>.stats{
+        width: 300px;
+        text-align: center;
+      }
+      .content>.stats{
+        flex-direction: column;
+        margin-top: 30px;
+      }
+      .content>.stats div{
+        margin: 20px 0px;
       }
     }
     .attribution { font-size: 11px; text-align: center; }
@@ -83,18 +129,26 @@
 <body>
 <section role="main_content" class="main_content">
   <div class="content">
-    <h1>Get <span>insights</span> that help your business grow.</h1>
-    <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.</p>
+    <div class="article">
+      <h1>Get <span>insights</span> that help your business grow.</h1>
+      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+    experience, and overall efficiency.</p>
+    </div>
     <div class="stats">
-      <p><span>10k+</span> companies</p>
-      <p><span>314</span> templates</p>
-      <p> <span>12m+</span> queries</p>
+      <div>
+        <h1>10k+</h1>
+        <p>companies</p></div>
+      <div>
+        <h1>314</h1>
+        <p>templates</p>
+      </div>
+      <div>
+        <h1>12m+</h1>
+        <p>queries</p>
+      </div>
     </div>
   </div>
-  <div class="mainImg">
-    <img src="/images/image-header-desktop.jpg" width="100%" alt="header image">
-  </div>
+  <div class="layerSec"></div>
 </section>
   <div class="attribution" role="CreativeLinks">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
